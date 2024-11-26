@@ -5,14 +5,9 @@
     <!-- Logo -->
     <div class="relative h-10">
       <div class="flex items-center" *ngIf="menuService.showSideBar">
-        <a
-          (click)="toggleSidebar()"
-          class="flex cursor-pointer items-center justify-center rounded bg-primary p-2 focus:outline-none focus:ring-1">
-          <svg-icon src="assets/icons/logo.svg"> </svg-icon>
+        <a (click)="toggleSidebar()">
+          <b class="ml-1 pl-2 text-2xl font-bold text-primary"> BRICKS </b>
         </a>
-        <b class="ml-1 pl-2 text-sm font-bold text-foreground">
-          {{ appJson.displayName }}
-        </b>
       </div>
       <button
         (click)="toggleSidebar()"
@@ -33,10 +28,7 @@
 
   <div class="mx-4 my-4 space-y-1">
     <!-- Version -->
-    <a
-      target="_blank"
-      href="https://github.com/luciano-work/angular-tailwind"
-      class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-card">
+    <a class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-card">
       <svg-icon
         src="assets/icons/heroicons/outline/information-circle.svg"
         [svgClass]="'h-5 w-5 text-muted-foreground/50'">

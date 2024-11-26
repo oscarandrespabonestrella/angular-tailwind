@@ -58,19 +58,19 @@ export class ProfileMenuComponent implements OnInit {
   public themeColors = [
     {
       name: 'base',
-      code: '#e11d48',
+      code: '#3c77bd',
     },
     {
-      name: 'yellow',
-      code: '#f59e0b',
+      name: 'indigo',
+      code: '#6f42c1',
     },
     {
-      name: 'green',
-      code: '#22c55e',
+      name: 'bear',
+      code: '#ad6303',
     },
     {
-      name: 'blue',
-      code: '#3b82f6',
+      name: 'denim',
+      code: '#32548d',
     },
     {
       name: 'orange',

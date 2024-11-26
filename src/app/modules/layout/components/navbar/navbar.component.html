@@ -16,10 +16,7 @@
 
       <!-- Logo -->
       <div class="flex items-center justify-start sm:order-2 md:mr-10 lg:hidden">
-        <a class="flex items-center justify-center rounded bg-primary p-2 focus:outline-none focus:ring-1">
-          <svg-icon src="assets/icons/logo.svg"></svg-icon>
-        </a>
-        <b class="hidden pl-3 text-sm font-bold text-foreground sm:block"> Angular Tailwind </b>
+        <b class="ml-1 pl-2 text-2xl font-bold text-primary"> BRICKS </b>
       </div>
 
       <!-- Desktop Menu -->
@@ -28,7 +25,15 @@
       </div>
 
       <!-- Profile menu -->
-      <div class="items-center justify-end sm:order-4 md:flex md:flex-1 lg:w-0">
+      <div class="items-center justify-end sm:order-5 md:flex md:flex-1 lg:w-0">
+        <div class="flex">
+          <label class="relative text-muted-foreground">
+            <div class="absolute left-2.5 top-2.5">
+              <svg-icon src="./assets/icons/heroicons/outline/magnifying-glass.svg" [svgClass]="'h-4 w-4'"> </svg-icon>
+            </div>
+            <input name="search" class="py-2 pl-8 pr-2" placeholder="Search users" type="text" value="" />
+          </label>
+        </div>
         <app-profile-menu></app-profile-menu>
       </div>
     </div>
