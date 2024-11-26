@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { DashboardCardComponent } from '../../components/dashboard-card/dashboard-card.component';
-import { BadgeComponent } from 'src/app/shared/components/badge/badge.component';
+import { TagComponent } from 'src/app/shared/components/tag/tag.component';
 import { DashboardButtonComponent } from '../../components/dashboard-button/dashboard-button.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [DashboardCardComponent, BadgeComponent, DashboardButtonComponent, AngularSvgIconModule],
+  imports: [DashboardCardComponent, TagComponent, DashboardButtonComponent, AngularSvgIconModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })

@@ -4,6 +4,8 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
 @layer base {
   :root {
     --background: 0 0% 100%;

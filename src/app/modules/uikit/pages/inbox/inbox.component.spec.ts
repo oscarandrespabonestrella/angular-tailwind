@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TableContentComponent } from './table-content.component';
+import { InboxComponent } from './inbox.component';
 
-describe('TableContentComponent', () => {
-  let component: TableContentComponent;
-  let fixture: ComponentFixture<TableContentComponent>;
+describe('InboxComponent', () => {
+  let component: InboxComponent;
+  let fixture: ComponentFixture<InboxComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TableContentComponent]
+      imports: [InboxComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TableContentComponent);
+    fixture = TestBed.createComponent(InboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

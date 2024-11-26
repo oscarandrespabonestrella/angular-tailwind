@@ -1,0 +1,47 @@
+<div class="w-full border-b border-t bg-primary-foreground">
+  <nav class="flex">
+    <a class="relative border-b-2 border-primary py-3 px-5 font-medium text-primary" href=""
+      >Open task
+
+      <svg
+        class="absolute right-[-2px] top-4 text-xs"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        viewBox="0 0 16 16"
+        style="width: var(--ng-icon__size, 1em); height: var(--ng-icon__size, 1em)">
+        <circle cx="8" cy="8" r="8"></circle>
+      </svg>
+    </a>
+    <a class="py-3 px-5" href="">Upcoming task</a>
+    <a class="py-3 px-5" href="">Completed task</a>
+    <a class="py-3 px-5" href="">Received documents</a>
+  </nav>
+</div>
+<div class="mx-auto px-4 py-4 sm:px-8 lg:container">
+  <div class="flex min-w-full flex-col rounded-xl border border-muted/20 bg-background p-2">
+    <table-inbox-action [total]="tasks.length"></table-inbox-action>
+    <div
+      class="scrollbar-thumb-rounded scrollbar-track-rounded relative max-h-[55svh] grow overflow-x-auto scrollbar-thin scrollbar-track-transparent scrollbar-thumb-muted">
+      <table
+        class="table w-full table-auto border-collapse border-0 text-left align-middle leading-5 text-muted-foreground">
+        <thead class="border border-muted/20 text-xs text-muted-foreground">
+          <tr table-inbox-header></tr>
+        </thead>
+        <tbody>
+          @for (task of tasks| paginate: currentPage: itemsPerPage; track $index) {
+          <tr class="hover:bg-card/50" table-inbox-row [task]="task"></tr>
+          } @empty {
+          <tr>
+            <td class="py-4 text-center text-sm" colspan="7">No users found</td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    <table-inbox-footer
+      [currentPage]="currentPage"
+      [totalItems]="tasks.length"
+      [itemsPerPage]="itemsPerPage"
+      (pageChange)="onPageChange($event)"></table-inbox-footer>
+  </div>
+</div>

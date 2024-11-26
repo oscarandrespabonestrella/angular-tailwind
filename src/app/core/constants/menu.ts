@@ -3,7 +3,7 @@ import { MenuItem } from '../models/menu.model';
 export class Menu {
   public static pages: MenuItem[] = [
     {
-      group: 'NAVIGATION',
+      group: 'Navigation',
       separator: false,
       items: [
         {
@@ -14,59 +14,59 @@ export class Menu {
         {
           icon: 'assets/icons/heroicons/outline/inbox.svg',
           label: 'Open task',
-          route: '/',
+          route: '/components/inbox',
         },
         {
           icon: 'assets/icons/heroicons/outline/clock.svg',
           label: 'Upcoming task',
-          route: '/',
+          route: '/upcoming-task',
         },
         {
           icon: 'assets/icons/heroicons/outline/clipboard-document-check.svg',
           label: 'Completed task',
-          route: '/',
+          route: '/completed-task',
         },
         {
           icon: 'assets/icons/heroicons/outline/document-text.svg',
           label: 'Received documents',
-          route: '/',
+          route: '/received-documents',
         },
         {
           icon: 'assets/icons/heroicons/outline/bookmark.svg',
           label: 'My Follow up',
-          route: '/',
+          route: '/follow-up',
         },
         {
           icon: 'assets/icons/heroicons/outline/folder.svg',
           label: 'My folders',
-          route: '/',
+          route: '/folders',
         },
         {
           icon: 'assets/icons/heroicons/outline/home-modern.svg',
           label: 'My entity',
-          route: '/',
+          route: '/entity',
         },
       ],
     },
 
     {
-      group: 'QUICK ACTIONS',
+      group: 'Quick actions',
       separator: false,
       items: [
         {
           icon: 'assets/icons/heroicons/outline/arrow-right-end-on-rectangle.svg',
           label: 'Create Incoming Document',
-          route: '/',
+          route: '/create-document',
         },
         {
           icon: 'assets/icons/heroicons/outline/arrow-right-start-on-rectangle.svg',
           label: 'Create Outgoing Document',
-          route: '/',
+          route: '/create-out-document',
         },
         {
           icon: 'assets/icons/heroicons/outline/user.svg',
           label: 'Add delegation',
-          route: '/',
+          route: '/add-delegation',
         },
       ],
     },

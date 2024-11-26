@@ -1,25 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 import { NavbarMobileComponent } from './navbar-mobile/navbar-mobilecomponent';
 import { ProfileMenuComponent } from './profile-menu/profile-menu.component';
 import { NavbarMenuComponent } from './navbar-menu/navbar-menu.component';
 import { AngularSvgIconModule } from 'angular-svg-icon';
+import { ThemeService } from 'src/app/core/services/theme.service';
 
 @Component({
-    selector: 'app-navbar',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'],
-    standalone: true,
-    imports: [
-        AngularSvgIconModule,
-        NavbarMenuComponent,
-        ProfileMenuComponent,
-        NavbarMobileComponent,
-    ],
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  standalone: true,
+  imports: [AngularSvgIconModule, NavbarMenuComponent, ProfileMenuComponent, NavbarMobileComponent],
 })
 export class NavbarComponent implements OnInit {
+  private themeService = inject(ThemeService);
   constructor(private menuService: MenuService) {}
 
+  changeSize() {
+    this.themeService.changeSize();
+  }
   ngOnInit(): void {}
 
   public toggleMobileMenu(): void {
